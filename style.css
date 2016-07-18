@@ -1,0 +1,56 @@
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #FEFEFE;
+}
+.title {
+	text-align: center;
+}
+.title h1 {
+	margin-bottom: 0px;
+}
+.title p {
+	margin-top: 5px;
+}
+.clear {
+	clear: both;
+}
+
+button {
+	padding: 8px 15px;
+	font-size: 14px;
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #25C4F5;
+	font-weight: bold;
+	border: 1px #1881A1 solid;
+}
+
+button:hover {
+	background-color: #1881A1;
+	border: 1px #25C4F5 solid;
+	color: white;
+	cursor: pointer;
+}
+
+.question {
+	display: none;
+}
+
+.question {
+	width: 380px;
+	margin: 0 auto;
+}
+
+.question .answers, .question .info {
+	margin: 0 50px;
+}
+
+.status {
+	text-align: center;
+	padding: 20px;
+}
+
+.results {
+	display:none; 
+	text-align: center;
+	padding: 20px;
+}
