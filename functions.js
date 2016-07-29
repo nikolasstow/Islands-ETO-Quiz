@@ -5,8 +5,17 @@ for(i = 0; ingredientsArray.length > i; i++) ingredients[ingredientsArray[i][0]]
 $('.difficulty').on('click','button', function () {
 	difficulty = $(this).val();
 	$('.difficulty').hide();
-	easyMode();
+	switch(difficulty) {
+        case 'easy':
+            easyMode();
+            break;
+        case 'medium':
+            mediumMode();
+            break;
+    }
 });
+
+function randomItem() { return menu[Math.round(Math.random() * menu.length)]; }
 
 function listIngredients(data) {
 	var html = [];
@@ -34,4 +43,12 @@ function shuffle(array) {
     }
 
     return array;
+}
+
+function inArray(array, item) {
+    var inArray = false;
+    for(i = 0; i < array.length; i++) {
+        if(array[i] == item) inArray = true;
+    }
+    return inArray;
 }

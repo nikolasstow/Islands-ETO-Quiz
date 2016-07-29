@@ -29,8 +29,6 @@ function newQuestion() {
 	$('.answers').html(listAnswers(answers));
 }
 
-function randomItem() { return menu[Math.round(Math.random() * menu.length)]; }
-
 function falseAnswers (realItem = false, num) {
 	var item = [realItem.itemName];
 		for(i = 0; i < num; i++) {	
@@ -45,14 +43,6 @@ function falseAnswers (realItem = false, num) {
 			}
 		}
 	return shuffle(item);
-}
-
-function inArray(array, item) {
-	var inArray = false;
-	for(i = 0; i < array.length; i++) {
-		if(array[i] == item) inArray = true;
-	}
-	return inArray;
 }
 
 function listAnswers (data) {
