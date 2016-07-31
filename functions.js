@@ -34,6 +34,7 @@ var Quiz = function (array) {
 }
 
 $(document).ready(function () {
+    $(".quiz").hide();
     $('.difficulty').on('click','button', function () {
         difficulty = $(this).val();
         $('.difficulty').hide();
