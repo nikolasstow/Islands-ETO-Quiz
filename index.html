@@ -3,7 +3,8 @@
 	<head>
 		<title>Islands ETO Quiz</title>
 		<meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
-		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700italic,700,600,300,100' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Ruda:400,700,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="style.css">
 		<script src="jquery.js"></script>
 		<script src="ingredients.js"></script>
@@ -13,31 +14,38 @@
 		<script src="mode/medium.js"></script>
 		<script src="mode/hard.js"></script>
 	</head>
-	<body style="max-width: 600px; margin: 5px auto; padding: 15px;">
-		<div class="title">
-			<h1>Islands ETO Quiz</h1>
-			<p>Beta 0.1.2</p>
-		</div>
-		<div class="clear"></div>
-		<div class="difficulty" style="text-align: center;">
-			<p>This site is very early in development. It may have bugs, or inaccuracies in food information.</p>
-			<h2>Choose Difficulty</h2>
-			<button value="easy">Easy</button>
-			<button value="medium" disabled>Medium</button>
-			<button value="hard" disabled>Hard</button>
-		</div>
-		<div class="results"></div>
-		
-		<div class="question">
-			<h3 class="title"></h3>
-			<div class="info"></div>
-			<div class="answers"></div>
-		</div>
-	
-		<div class="status">
-			<span class="correct"></span>
-			<span class="questions"></span>
-			<span class="percent"></span>
+	<body>
+		<div class="content">
+			<div class="header">
+				<img src="islands.png" alt="Islands">
+				<h1>Unofficial ETO Quiz</h1>
+				<p>Beta 0.1.2</p>
+			</div>
+			<div class="clear"></div>
+			<div class="difficulty" style="text-align: center;">
+				<div class="warning">
+					<p>This site is very early in development. It may have bugs, or inaccuracies in food information.</p>
+				</div>
+				<h2>Choose Difficulty</h2>
+				<button value="easy">Easy</button>
+				<button value="medium" disabled>Medium</button>
+				<button value="hard" disabled>Hard</button>
+			</div>
+			<div class="results"></div>
+			
+			<div class="quiz">
+				<div class="question">
+					<h3 class="title"></h3>
+					<div class="info"></div>
+					<div class="answers"></div>
+				</div>
+			
+				<div class="status">
+					<span class="correct"></span>
+					<span class="questions"></span>
+					<span class="percent"></span>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

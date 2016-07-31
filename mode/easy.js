@@ -1,4 +1,4 @@
-var AMOUNT_OF_QUESTIONS = 5;
+var AMOUNT_OF_QUESTIONS = 15;
 var MAX_ANSWERS = 5;
 
 var EASY = new Quiz({
@@ -13,6 +13,7 @@ var EASY = new Quiz({
 			if(!EASY.sortedMenu[curItem.cat]) EASY.sortedMenu[curItem.cat] = [];
 			EASY.sortedMenu[curItem.cat].push(curItem.itemName);
 		}
+		$('.quiz').show();
 	},
 	question: function (quiz) {
 		var item = quiz.questions[quiz.questionPosition]; // Current question
@@ -52,6 +53,7 @@ var EASY = new Quiz({
 			else quiz.finish();
 	},
 	finish: function (quiz) {
+		$('.quiz').hide();
 		$('.question, .status').hide(); // Hide question and status
 		$('.difficulty, .results').show(); // show results
 
