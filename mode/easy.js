@@ -1,9 +1,11 @@
 var title = "Match the menu item to the ingredients";
 var easyAnswer = "";
-var amountOfQuestions = 5;
+var amountOfQuestions = 15;
 var qNum = 0;
 var correctAnswers = 0;
 var percent = 1;
+var questions;
+var sortedMenu = [];
 
 $(document).ready(function () {
 	$('.answers').on('click', '.answer', function () {
@@ -12,16 +14,27 @@ $(document).ready(function () {
 });
 
 function easyMode() {
+	sortMenu();
+	questions = shuffle(menu).slice(0, amountOfQuestions); // get random questions
+
 	$('.question .title').text(title);
 	$('.question').show();
 	newQuestion();
 }
 
-function newQuestion() {
-	$('.status .questions').text((qNum + 1) + "/" + amountOfQuestions + " ");
+function sortMenu() {
+	for(i = 0; i < menu.length; i++) {
+		var curItem = menu[i];
+		if(!sortedMenu[curItem.cat]) sortedMenu[curItem.cat] = [];
+		sortedMenu[curItem.cat].push(curItem.itemName);
+	}
+}
 
-	var item = randomItem();
-	var answers = falseAnswers(item , 5);
+function newQuestion() {
+	$('.status .questions').text(qNum + "/" + amountOfQuestions + " ");
+
+	var item = questions[qNum];
+	var answers = getAnswers(item , 5);
 
 	easyAnswer = item.itemName;
 
@@ -29,22 +42,13 @@ function newQuestion() {
 	$('.answers').html(listAnswers(answers));
 }
 
-function randomItem() { return menu[Math.round(Math.random() * menu.length)]; }
-
-function falseAnswers (realItem = false, num) {
-	var item = [realItem.itemName];
-		for(i = 0; i < num; i++) {	
-			var itemFound = false;
-			for(e = 0; !itemFound && e < 300; e++) {
-				var tempItem = menu[Math.round(Math.random() * menu.length)];
-				if(tempItem != null && tempItem.cat == realItem.cat // If item is in the same category
-					&& !inArray(item,tempItem.itemName)) { // If the item hasn't already been choose
-						itemFound = true; // Found an item
-						item.push(tempItem.itemName); // Add to array
-				}
-			}
-		}
-	return shuffle(item);
+function getAnswers (realItem, maxNum) {
+	var answers = sortedMenu[realItem.cat]; // Get all items in current category
+	var curLoc = answers.indexOf(realItem.itemName); // Get location of correct item in array
+	answers.splice(curLoc,1); // Remove current item before shuffling
+	answers = shuffle(answers).slice(0, (maxNum - 1)); // Shuffling items, and selecting one less than the max
+	answers.push(realItem.itemName); // Re-adding current item
+	return shuffle(answers); // shuffling and returning answers
 }
 
 function inArray(array, item) {
@@ -71,7 +75,6 @@ function checkAnswer(data) {
 		percent = correctAnswers / qNum;
 		$('.status .percent').text("[" + Math.round(percent * 100) + "%]");
 
-		console.log('ran');
 		if(qNum < amountOfQuestions) newQuestion();
 		else finishQuiz();
 }
