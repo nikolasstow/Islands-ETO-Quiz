@@ -1,4 +1,4 @@
-var AMOUNT_OF_QUESTIONS = menu.length;
+var AMOUNT_OF_QUESTIONS = 15;
 var MAX_ANSWERS = 5;
 
 var EASY = new Quiz({
