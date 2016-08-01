@@ -12,7 +12,12 @@ var Quiz = function (array) {
     this.correctAnswer = "";
 
     this.questions = array.questions;
-    this.question = function () { array.question(this); }
+    this.question = function () { 
+        this.updateStatus();
+        $('.status .correct').text("");
+        $('.next').hide();
+        array.question(this); 
+    }
     this.finish = function () { array.finish(this); }
     this.checkAnswer = function (data) { array.checkAnswer(this, data); }
 
@@ -23,11 +28,12 @@ var Quiz = function (array) {
         $('.question').show(); // Show question
 
         if(this.question) this.question(this); // Start first question
-        this.updateStatus();
     }
 
     this.updateStatus = function () {
         $('.status .questions').text(this.questionPosition + "/" + this.amountOfQuestions + " ");
+    }
+    this.updatePercent = function () {
         $('.status .percent').text("[" + Math.round(this.percent * 100) + "%]");
     }
 
@@ -36,7 +42,7 @@ var Quiz = function (array) {
 $(document).ready(function () {
     $('.difficulty').on('click','button', function () {
         difficulty = $(this).val();
-        $('.difficulty').hide();
+        $('.difficulty, .next').hide();
         EASY.start();
     });
 });
