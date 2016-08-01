@@ -52,7 +52,7 @@ var EASY = new Quiz({
 			if(quiz.questionPosition < quiz.amountOfQuestions) {
 				$('.answer').attr('disabled','disabled');
 				$('.next').show();
-				$("html, body").animate({ scrollTop: ($(document).height() - $('.footer').height() ) }, "slow"); // Scroll to bottom of page
+				$("html, body").animate({ scrollTop: $(document).height() }, "slow"); // Scroll to bottom of page
 			} else quiz.finish();
 	},
 	finish: function (quiz) {

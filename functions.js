@@ -15,11 +15,14 @@ var Quiz = function (array) {
     this.question = function () { 
         this.updateStatus();
         $('.status .correct').text("");
-        $('.next').hide();
+        $('.next, .footer').hide();
         array.question(this); 
-        $("html, body").animate({ scrollTop: ($(document).height() - $('.footer').height() ) }, "slow"); // Scroll to bottom of page
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow"); // Scroll to bottom of page
     }
-    this.finish = function () { array.finish(this); }
+    this.finish = function () { 
+        $('.footer').show();
+        array.finish(this);
+    }
     this.checkAnswer = function (data) { array.checkAnswer(this, data); }
 
     this.start = function () {
