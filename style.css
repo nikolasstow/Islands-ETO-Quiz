@@ -33,7 +33,7 @@ body {
 	border: 3px solid #FFC300;
 }
 
-button {
+.difficulty button {
 	padding: 8px 15px;
 	font-size: 38px;
 	font-family: 'Amatic SC', cursive;
@@ -42,7 +42,7 @@ button {
 	opacity: 0.8;
 	color: white;
 }
-button:hover {
+.difficulty button:hover {
 	opacity: 1;
 	font-size: 45px;
 	padding: 0 12px;
@@ -50,7 +50,7 @@ button:hover {
 	font-weight: bold;
 }
 
-button:disabled {
+.difficulty button:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
@@ -87,8 +87,21 @@ button:disabled {
 	margin: 0 auto;
 	background-color: white;
 	color: black;
+	padding: 10px;
 	border-style: solid;
 	border-width: 14px;
 	border-image: url(border.png) 14;
 	box-shadow: 1px 2px 6px black;
+}
+
+.next {
+	cursor: pointer;
+	display: block;
+	color: #1ca1c8;
+	width: 100%;
+	text-align: center;
+	padding: 8px 0;
+	font-size: 38px;
+	font-family: 'Amatic SC', cursive;
+	background-color: transparent;
 }
