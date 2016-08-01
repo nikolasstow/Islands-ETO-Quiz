@@ -6,11 +6,6 @@ var Quiz = function (array) {
     this.title = array.title; // Question Title
     this.amountOfQuestions = array.amountOfQuestions; // Amount of Questions
 
-    this.questionPosition = 0; // Current question number
-    this.amountCorrect = 0; // Amount of correct answers
-    this.percent = 1; // Percentage of correct answers
-    this.correctAnswer = "";
-
     this.questions = array.questions;
     this.question = function () { 
         this.updateStatus();
@@ -26,10 +21,16 @@ var Quiz = function (array) {
     this.checkAnswer = function (data) { array.checkAnswer(this, data); }
 
     this.start = function () {
+        this.questionPosition = 0; // Current question number
+        this.amountCorrect = 0; // Amount of correct answers
+        this.percent = 1; // Percentage of correct answers
+        this.correctAnswer = "";
+        this.updatePercent();
+
         if(array.before) array.before(); // Code to run before starting quiz
 
         $('.question .title').text(this.title); // Insert title into page
-        $('.question').show(); // Show question
+        $('.question, .status').show(); // Show question
 
         if(this.question) this.question(this); // Start first question
     }
