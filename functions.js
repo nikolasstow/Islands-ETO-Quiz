@@ -36,7 +36,7 @@ var Quiz = function (array) {
     }
 
     this.updateStatus = function () {
-        $('.status .questions').text(this.questionPosition + "/" + this.amountOfQuestions + " ");
+        $('.status .questions').text((this.questionPosition + 1) + "/" + this.amountOfQuestions + " ");
     }
     this.updatePercent = function () {
         $('.status .percent').text("[" + Math.round(this.percent * 100) + "%]");

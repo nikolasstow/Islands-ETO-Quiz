@@ -49,11 +49,9 @@ var EASY = new Quiz({
 			quiz.percent = quiz.amountCorrect/ quiz.questionPosition; // update percent correct
 			quiz.updatePercent();
 
-			if(quiz.questionPosition < quiz.amountOfQuestions) {
-				$('.answer').attr('disabled','disabled');
-				$('.next').show();
-				$("html, body").animate({ scrollTop: $(document).height() }, "slow"); // Scroll to bottom of page
-			} else quiz.finish();
+			$('.answer').attr('disabled','disabled');
+			$('.next').show();
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow"); // Scroll to bottom of page
 	},
 	finish: function (quiz) {
 		$('.quiz').hide();
@@ -69,6 +67,8 @@ $(document).ready(function () {
 		EASY.checkAnswer($(this).val());
 	});
 	$('.next').click(function () {
-		EASY.question();
+		if(EASY.questionPosition < EASY.amountOfQuestions) {
+			EASY.question();
+		} else EASY.finish();
 	});
 });
