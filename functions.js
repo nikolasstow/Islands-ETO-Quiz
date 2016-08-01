@@ -17,7 +17,7 @@ var Quiz = function (array) {
         $('.status .correct').text("");
         $('.next').hide();
         array.question(this); 
-         $("html, body").animate({ scrollTop: $(document).height() }, "slow"); // Scroll to bottom of page
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow"); // Scroll to bottom of page
     }
     this.finish = function () { array.finish(this); }
     this.checkAnswer = function (data) { array.checkAnswer(this, data); }
