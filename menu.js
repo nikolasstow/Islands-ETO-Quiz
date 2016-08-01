@@ -9,7 +9,7 @@ var menu = [
          ],
          [
             "28f9b2",
-            false
+            true
          ],
          [
             "19e344",
@@ -41,7 +41,7 @@ var menu = [
          ],
          [
             "49dd5d",
-            false
+            true
          ]
       ],
       "side":"None",
@@ -1021,7 +1021,7 @@ var menu = [
          ],
          [
             "eb099b",
-            false
+            true
          ]
       ],
       "side":"Ranchero Beans w\/ Cotija Cheese",
@@ -1073,7 +1073,7 @@ var menu = [
          ],
          [
             "49dd5d",
-            false
+            true
          ]
       ],
       "side":"Ranchero Beans w\/ Cotija Cheese",
@@ -1088,8 +1088,8 @@ var menu = [
             false
          ],
          [
-            "a85de2",
-            false
+            "91704d",
+            true
          ],
          [
             "1ac532",
@@ -1125,7 +1125,7 @@ var menu = [
          ],
          [
             "49dd5d",
-            false
+            true
          ]
       ],
       "side":"Ranchero Beans w\/ Cotija Cheese",
@@ -1141,7 +1141,7 @@ var menu = [
          ],
          [
             "91704d",
-            false
+            true
          ],
          [
             "30cbab",
@@ -1177,7 +1177,7 @@ var menu = [
          ],
          [
             "49dd5d",
-            false
+            true
          ]
       ],
       "side":"Ranchero Beans w\/ Cotija Cheese",
@@ -1213,7 +1213,7 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "c28678",
@@ -1265,7 +1265,7 @@ var menu = [
          ],
          [
             "df7bdd",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -1305,7 +1305,7 @@ var menu = [
          ],
          [
             "df7bdd",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -1377,7 +1377,7 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "5d32db",
@@ -1417,7 +1417,7 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "aaab0f",
@@ -1469,11 +1469,11 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "df7bdd",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -1517,11 +1517,7 @@ var menu = [
          ],
          [
             "5fb51c",
-            false
-         ],
-         [
-            "51c8c9",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -1561,7 +1557,7 @@ var menu = [
          ],
          [
             "5fb51c",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -1605,11 +1601,11 @@ var menu = [
          ],
          [
             "df7bdd",
-            false
+            true
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "c28678",
@@ -1706,11 +1702,11 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "df7bdd",
-            false
+            true
          ],
          [
             "c28678",
@@ -1802,11 +1798,11 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "df7bdd",
-            false
+            true
          ],
          [
             "aaab0f",
@@ -1854,7 +1850,7 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "5d32db",
@@ -1951,7 +1947,7 @@ var menu = [
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -2095,11 +2091,11 @@ var menu = [
          ],
          [
             "5fb51c",
-            false
+            true
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -2202,8 +2198,8 @@ var menu = [
             false
          ],
          [
-            "a85de2",
-            false
+            "5fb51c",
+            true
          ],
          [
             "87a247",
@@ -2227,11 +2223,11 @@ var menu = [
          ],
          [
             "5fb51c",
-            false
+            true
          ],
          [
             "1c75a6",
-            false
+            true
          ],
          [
             "b9dc8a",
@@ -2259,11 +2255,11 @@ var menu = [
          ],
          [
             "ed203f",
-            false
+            true
          ],
          [
             "51c8c9",
-            false
+            true
          ],
          [
             "87a247",
@@ -2315,6 +2311,7 @@ var menu = [
    },
    {
       "itemName":"Side Slaw",
+      "cat":"side",
       "ingredients":[
          [
             "ca9df6",
