@@ -27,6 +27,15 @@ body {
 	clear: both;
 }
 
+.footer {
+	text-align: center;
+}
+
+.footer img {
+	width: 75%;
+	padding: 10px 0;
+}
+
 .warning {
 	color: black;
 	background-color: white;
